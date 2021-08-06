@@ -3,10 +3,12 @@ const path = require('path')
 const socketio = require('socket.io')
 const http = require('http')
 const app = express()
+const cors = require('cors')
 
-app.set('port', 3000)
+app.set('port', process.env.PORT || 5000)
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(cors())
 
 const server = http.createServer(app)
 const io = socketio(server)
