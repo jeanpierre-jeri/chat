@@ -16,7 +16,10 @@
             <input class="border-2 border-gray-600 rounded p-3" type="text" id="username" placeholder="Ingrese su nombre">
             <div id="all_messages" class="h-96 border-2 border-gray-600 my-5 rounded p-3 overflow-auto text-left"></div>
             <div id="writing"></div>
-            <textarea class="border-2 border-gray-600 rounded p-3 h-50" id="write_message" placeholder="Ingrese su mensaje"></textarea>
+            <div class="flex justify-between gap-10 pr-5">
+                <textarea class="border-2 border-gray-600 rounded p-3 h-50 w-screen" id="write_message" placeholder="Ingrese su mensaje"></textarea>
+                <button id="sendMessage" class="px-10 py-2 bg-blue-500 rounded text-white">Enviar</button>
+            </div>
         </div>
     </div>
 

@@ -5,9 +5,10 @@ const write_message = document.getElementById('write_message')
 const all_messages = document.getElementById('all_messages')
 const new_user = document.getElementById('new_user')
 const writing = document.getElementById('writing')
+const sendMessage = document.getElementById('sendMessage')
 
-write_message.addEventListener('keyup', (e) => {
-    if (e.code == 'Enter') {
+sendMessage.addEventListener('click', (e) => {
+    if (e.returnValue) {
         if (username.value != '' && write_message != '') {
             socket.emit('message', {
                 username: username.value,
